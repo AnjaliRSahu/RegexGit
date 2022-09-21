@@ -12,6 +12,7 @@ namespace RegexPattern
         {
             PatternForRegex.ValidFirstName();
             ValidLastName.LastName();
+            ValidEmail.Email();
 
             Console.ReadLine();
         }
