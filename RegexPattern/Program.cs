@@ -11,6 +11,7 @@ namespace RegexPattern
         static void Main(string[] args)
         {
             PatternForRegex.ValidFirstName();
+            ValidLastName.LastName();
 
             Console.ReadLine();
         }
