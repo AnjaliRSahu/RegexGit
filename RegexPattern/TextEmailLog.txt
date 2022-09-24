@@ -1,0 +1,7 @@
+﻿2022-09-24 17:14:04.5532 DEBUG valid email
+2022-09-24 17:27:02.9812 DEBUG valid emailabc.100@gmail.com.au
+2022-09-24 17:30:19.6258 DEBUG valid email abc-100@yahoo.com
+2022-09-24 17:30:58.5626 DEBUG valid email abc@1.com
+2022-09-24 17:31:36.0699 DEBUG valid email abc@gmail.com.com
+2022-09-24 17:32:09.1847 DEBUG valid email 96Anji-s@gmail.com
+2022-09-24 17:36:36.2548 ERROR Invalid @nji1996@gmail.com

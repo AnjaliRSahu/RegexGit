@@ -9,20 +9,30 @@ namespace RegexPattern
 {
     public class ValidEmail
     {
+        NLog log = new NLog();
         
-        public static void Email()
+        public  void Email()
         {
             Console.WriteLine("Enter Email");
-            string email=Console.ReadLine();
-            string pattern2 = "^[a-zA-Z0-9]+(?:.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:.[a-zA-Z0-9]+)*$";
-
-            if (Regex.IsMatch(email, pattern2))
+            string email = Console.ReadLine();
+            string pattern2 = "^[a-z-A-Z-0-9]{3,10}?[.,-,+]{0,1}?[0-9]{0,}[@][a-z-0-9]{1,}[.][a-z]{2,}?[.]{0,1}[a-z]{0,3}$";
+            try
             {
-                Console.WriteLine("valid email");
+                if (Regex.IsMatch(email, pattern2))
+                {
+                    log.LogDebug("valid email " +email);
+                    Console.WriteLine("valid email");
+                   
+                }
+                else
+                {
+                    Console.WriteLine("Invalid");
+                    log.LogError("Invalid " +email);
+                }
             }
-            else
+            catch (Exception e)
             {
-                Console.WriteLine("Invalid");
+                Console.WriteLine(e.Message);
             }
         }
     }
